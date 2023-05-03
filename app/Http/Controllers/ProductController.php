@@ -68,4 +68,12 @@ class ProductController extends Controller
       'productCategories' => $productCategories,
     ]);
   }
+
+  public function destroy($productId) {
+    $product = Product::findOrFail($productId);
+
+    $product->delete();
+
+    return to_route('products.index');
+  }
 }

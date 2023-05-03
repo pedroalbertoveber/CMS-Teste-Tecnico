@@ -74,7 +74,7 @@
                 name="categories[]" 
                 id="{{ $category->id }}" 
                 value="{{ $category->id }}"
-                
+
                 @if (in_array($category->name, $productCategories))
                   checked
                 @endif
@@ -101,12 +101,22 @@
     </div>
 
     <!-- Submit Button -->
-    <div class="w-full flex justify-end items-center py-8">
+    <div class="w-full flex justify-end items-center py-8 gap-4">
       <button type="submit" class="flex items-center gap-2 bg-rose-500 py-2 px-8 rounded-full text-gray-200 font-bold hover:bg-rose-600 hover:text-gray-100 duration-150">
         Editar Produto
         <i class="bi bi-pencil-square text-gray-100"></i>
       </button>
     </div>
+  </form>
+  
+  <form method="POST" action={{ "/products/delete/" . $product->id }} class="w-full flex items-center justify-end max-w-[1000px]  mx-auto">
+    @csrf
+    @method('DELETE')
+
+    <button type="submit" class="flex items-center gap-2 bg-rose-500 py-2 px-8 rounded-full text-gray-200 font-bold hover:bg-rose-600 hover:text-gray-100 duration-150">
+      Excluir Produto
+      <i class="bi bi-trash text-gray-100"></i>
+    </button>
   </form>
 
   <footer class="w-full max-w-[1000px] mx-auto pb-12">

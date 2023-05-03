@@ -33,4 +33,5 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.ind
 Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 
 Route::get('/products/{product_id}', [ProductController::class, 'edit'])->name('products.edit');
+Route::delete('/products/delete/{product_id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
