@@ -1,3 +1,10 @@
 @tailwind base;
+
+@layer base {
+  body, div, section, aside {
+    @apply box-border bg-slate-50
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
