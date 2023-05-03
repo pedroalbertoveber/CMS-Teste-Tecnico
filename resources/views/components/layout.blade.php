@@ -12,7 +12,7 @@
   <!-- TAILWIND CONFIG -->
   @vite('resources/css/app.css')
 
-  <title>Music App</title>
+  <title>CMS</title>
 </head>
 <body class="flex items-start">
   <aside class="w-[15%] flex flex-col items-start p-4 border-r h-[100vh] shadow-md fixed top-0 bottom-0 z-10">
@@ -35,18 +35,18 @@
 
           <li>
             <a href="#" class="w-full flex items-center gap-4 group" >
-              <i class="bi bi-music-note-list group-hover:text-rose-600 duration-150"></i>
+              <i class="bi bi-hash group-hover:text-rose-600 duration-150"></i>
               <span class="text-zinc-900 group-hover:text-rose-600 text-md duration-150 font-semibold">
-                Gêneros
+                Categorias
               </span>
             </a>
           </li>
 
           <li>
             <a href="#" class="w-full flex items-center gap-4 group" >
-              <i class="bi bi-mic group-hover:text-rose-600 duration-150"></i>
+              <i class="bi bi-upc group-hover:text-rose-600 duration-150"></i>
               <span class="text-zinc-900 group-hover:text-rose-600 text-md duration-150 font-semibold">
-                Artistas
+                Produtos
               </span>
             </a>
           </li>
