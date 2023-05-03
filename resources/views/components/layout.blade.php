@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <!-- BOOTSTRAP ICONS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
@@ -61,9 +66,9 @@
 
         <input 
           type="text" 
-          placeholder="Procure por algum álbum" 
+          placeholder="Procure por algum produto" 
           required 
-          class="placeholder:text-zinc-500 text-sm outline-none text-zinc-700 bg-transparent"
+          class="placeholder:text-zinc-500 text-sm outline-none text-zinc-700 bg-transparent flex-1"
         />
       </div>
     </header>
