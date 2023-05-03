@@ -48,7 +48,7 @@
           </li>
 
           <li>
-            <a href="#" class="w-full flex items-center gap-4 group" >
+            <a href="{{ route('products.index') }}" class="w-full flex items-center gap-4 group" >
               <i class="bi bi-upc group-hover:text-rose-600 duration-150"></i>
               <span class="text-zinc-900 group-hover:text-rose-600 text-md duration-150 font-semibold">
                 Produtos

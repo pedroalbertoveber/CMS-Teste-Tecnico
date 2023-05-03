@@ -50,4 +50,22 @@ class ProductController extends Controller
       return view('products.create')
         ->with('categories', $categories);
   }
+
+  public function edit($productId) {
+    $product = Product::findOrFail($productId);
+    $categories = Category::all();
+
+    $productCategories = [];
+
+    foreach ($product->categories->toArray() as $category)
+    {
+      $productCategories[] = $category['name'];
+    }
+
+    return view('products.edit', [
+      'product' => $product,
+      'categories' => $categories,
+      'productCategories' => $productCategories,
+    ]);
+  }
 }
