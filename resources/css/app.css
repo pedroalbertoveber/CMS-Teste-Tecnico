@@ -1,14 +1,14 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 @tailwind base;
 
 @layer base {
-  body, div, section, aside {
+  body {
     @apply box-border bg-slate-50
   }
 }
 
 @tailwind components;
 @tailwind utilities;
-
-* {
-  font-family: 'Poppins', sans-serif;
-}

@@ -20,7 +20,7 @@
   <title>CMS</title>
 </head>
 <body class="flex items-start">
-  <aside class="w-[15%] flex flex-col items-start p-4 border-r h-[100vh] shadow-md fixed top-0 bottom-0 z-10">
+  <aside class="w-[15%] flex flex-col items-start p-4 border-r h-[100vh] shadow-md fixed top-0 bottom-0 z-10 bg-slate-50">
     <div class="flex w-full justify-start items-center gap-2 mb-8">
       <div class="w-[12px] h-[12px] border rounded-full bg-red-600"></div>
       <div class="w-[12px] h-[12px] border rounded-full bg-yellow-500"></div>
@@ -39,7 +39,7 @@
           </li>
 
           <li>
-            <a href="#" class="w-full flex items-center gap-4 group" >
+            <a href="{{ route('categories.index') }}" class="w-full flex items-center gap-4 group" >
               <i class="bi bi-hash group-hover:text-rose-600 duration-150"></i>
               <span class="text-zinc-900 group-hover:text-rose-600 text-md duration-150 font-semibold">
                 Categorias

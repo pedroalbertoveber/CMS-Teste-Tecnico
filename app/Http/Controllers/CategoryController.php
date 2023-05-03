@@ -26,12 +26,19 @@ class CategoryController extends Controller
             return $category;
         });
 
-        return view('home')
+        return to_route('categories.index')
             ->with('success', 'Categoria cadastrada com sucesso!');
 
     }
 
     public function create() {
         return view('categories.create');
+    }
+
+    public function index() {
+        $categories = Category::all();
+
+        return view('categories.index')
+            ->with('categories', $categories);
     }
 }
