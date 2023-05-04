@@ -23,6 +23,17 @@ npm install
 
 *Também é necessário ter o composer, node e php instalados para funcionar corretamente*
 
+É necessário criar um arquivo no root da aplicação com o nome ".env" e dentro dele ter as mesmas variáveis do ".env.example", porém as mais importantes são as abaixo: 
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nome_do_banco
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
 Depois de ter as dependências instaladas, para que o programa rode corretamente, é preciso ter uma conexão com o banco de dados mySql rodando na porta padrão (3306), sendo assim, recomendo também o download do xampp.
 
 ## Pronto! Tudo instalado corretamente
