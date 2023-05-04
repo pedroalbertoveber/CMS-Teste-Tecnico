@@ -30,7 +30,7 @@
     <nav class="w-full">
       <ul class="w-full flex flex-col gap-4">
           <li class="w-full">
-            <a href="#"  class="w-full flex items-center gap-4 group">
+            <a href="/"  class="w-full flex items-center gap-4 group">
               <i class="bi bi-house group-hover:text-rose-600 duration-150"></i>
               <span class="text-zinc-900 group-hover:text-rose-600 text-md duration-150 font-semibold">
                 Home
@@ -61,16 +61,22 @@
 
   <main class="w-full">
     <header class="w-full border-b border-b-zinc-200 bg-transparent backdrop-blur-sm shadow-sm h-[80px] px-8 flex items-center fixed top-0 left-[15%]">
-      <div class="flex items-center justify-start py-2 px-4 min-w-[25rem] rounded-full gap-4 bg-slate-50">
-        <i class="bi bi-search text-rose-600"></i>
+      <form 
+        method="GET"
+        action="{{ route('products.index') }}"
+        class="flex items-center justify-start py-2 px-4 min-w-[25rem] rounded-full gap-4 bg-slate-50"
+      >
+        <button>
+          <i class="bi bi-search text-rose-600"></i>
+        </button>
 
         <input 
           type="text" 
           placeholder="Procure por algum produto" 
-          required 
+          name="query"
           class="placeholder:text-zinc-500 text-sm outline-none text-zinc-700 bg-transparent flex-1"
         />
-      </div>
+      </form>
     </header>
 
     <section class="pt-[80px] w-full min-h-[100vh] pl-[15%] bg-gradient-to-b from-slate-100 to-rose-100">

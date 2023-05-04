@@ -1,6 +1,12 @@
 <x-layout>
   <div class="bg-transparent w-full max-w-[1000px] mx-auto mt-12">
-    <h1 class="text-center text-6xl font-semibold">Todos os Produtos</h1>
+    <h1 class="text-center text-6xl font-semibold">
+      @isset($search)
+        Resultados da busca por {{ $search }}
+      @else
+        Todos os Produtos
+      @endisset
+    </h1>
   </div>
 
   @if(count($products) === 0)
