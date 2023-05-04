@@ -30,7 +30,7 @@
     <nav class="w-full">
       <ul class="w-full flex flex-col gap-4">
           <li class="w-full">
-            <a href="/"  class="w-full flex items-center gap-4 group">
+            <a href="/+"  class="w-full flex items-center gap-4 group">
               <i class="bi bi-house group-hover:text-rose-600 duration-150"></i>
               <span class="text-zinc-900 group-hover:text-rose-600 text-md duration-150 font-semibold">
                 Home
