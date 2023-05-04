@@ -31,6 +31,35 @@ class CategoryController extends Controller
 
     }
 
+    public function edit($categoryId) {
+        $category = Category::findOrFail($categoryId);
+
+        return view('categories.edit')
+            ->with('category', $category);
+    }
+
+    public function update($categoryId, CategoryFormRequest $request) {
+        DB::transaction(function () use ($categoryId, $request) {
+            $data = $request->except(['_token']);
+
+            $category = Category::findOrFail($categoryId);
+
+            $category->name = $data['name'];
+            $category->update();
+
+            return $category;
+        });
+
+        return to_route('categories.index');
+    }
+
+    public function destroy($categoryId) {
+        $category = Category::findOrFail($categoryId);
+        $category->delete();
+
+        return to_route('categories.index');
+    }
+
     public function create() {
         return view('categories.create');
     }

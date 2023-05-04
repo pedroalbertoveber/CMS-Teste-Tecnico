@@ -3,6 +3,10 @@
     <h1 class="text-center text-6xl font-semibold">Todos os Produtos</h1>
   </div>
 
+  @if(count($products) === 0)
+      <x-empty />
+  @endif
+
   <div 
     class="grid grid-cols-3 max-w-[1000px] mx-auto py-16 gap-8"
   >

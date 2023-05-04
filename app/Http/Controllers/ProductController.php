@@ -36,19 +36,43 @@ class ProductController extends Controller
       return $newProduct;
     });
 
+    $product->categories()->attach($request['categories']);
 
-    foreach($request['categories'] as $category) {
-      $product->categories()->attach($category);
-    }
-
-    return view('home');
+    return to_route('products.index');
   }
   
   public function create() {
       $categories = Category::all();
 
+      if (count($categories) === 0) {
+        return to_route('categories.create');
+      }
+
       return view('products.create')
         ->with('categories', $categories);
+  }
+
+  public function update($productId, ProductFormRequest $request) {
+    $product = DB::transaction(function () use ($productId, $request) {
+      $selectedProduct = Product::findOrFail($productId);
+
+      $data = $request->except(['_token']);
+
+      $selectedProduct->name = $data['name'];
+      $selectedProduct->price = $data['price'];
+      $selectedProduct->description = $data['description'];
+      $selectedProduct->brand = $data['brand'];
+
+      $selectedProduct->update();
+
+      return $selectedProduct;
+    });
+
+    foreach($request['categories'] as $category) {
+      $product->categories()->sync($category);
+    }
+
+    return to_route('products.index');
   }
 
   public function edit($productId) {
@@ -77,3 +101,4 @@ class ProductController extends Controller
     return to_route('products.index');
   }
 }
+ 

@@ -1,5 +1,5 @@
 <x-layout>
-  <div class="flex items-center w-full bg-transparent max-w-[1000px] mx-auto">
+  <div class="flex items-center w-full bg-transparent max-w-[1000px] mx-auto -mt-24">
     <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="max-w-[400px] -mr-28">
       <defs>
         <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
