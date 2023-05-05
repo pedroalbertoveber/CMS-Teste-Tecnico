@@ -76,9 +76,7 @@ class ProductController extends Controller
       return $selectedProduct;
     });
 
-    foreach($request['categories'] as $category) {
-      $product->categories()->sync($category);
-    }
+    $product->categories()->sync($request['categories']);
 
     return to_route('products.index');
   }
